@@ -15,18 +15,18 @@ let candidateAnswers;
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-let candidateName = input.question("Enter Name: ")
+ candidateName = input.question("Enter Name: ")
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-  let candidateAnswer = input.question(question)
+ candidateAnswer = input.question(question)
 }
 
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-if (candidateAnswer && correctAnswer){
+if (candidateAnswers == correctAnswer){
   console.log("Correct answer!")
 } else {
   console.log("Incorrect answer.")
@@ -40,7 +40,7 @@ if (candidateAnswer && correctAnswer){
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
-  let candidateName = input.question("Enter Name: ")
+
   console.log("Hello " + candidateName + "," )
   askQuestion();
   gradeQuiz(this.candidateAnswers);
